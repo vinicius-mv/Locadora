@@ -22,18 +22,19 @@ Partial Class FrmCadLocacao
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tabPrincipal = New System.Windows.Forms.TabControl()
         Me.tabPesquisa = New System.Windows.Forms.TabPage()
+        Me.btnExportar = New System.Windows.Forms.Button()
         Me.btnRelatorio = New System.Windows.Forms.Button()
         Me.cboClientesBusca = New System.Windows.Forms.ComboBox()
         Me.btnPesquisar = New System.Windows.Forms.Button()
@@ -114,6 +115,7 @@ Partial Class FrmCadLocacao
         '
         'tabPesquisa
         '
+        Me.tabPesquisa.Controls.Add(Me.btnExportar)
         Me.tabPesquisa.Controls.Add(Me.btnRelatorio)
         Me.tabPesquisa.Controls.Add(Me.cboClientesBusca)
         Me.tabPesquisa.Controls.Add(Me.btnPesquisar)
@@ -126,6 +128,15 @@ Partial Class FrmCadLocacao
         Me.tabPesquisa.TabIndex = 0
         Me.tabPesquisa.Text = "Pesquisa"
         Me.tabPesquisa.UseVisualStyleBackColor = True
+        '
+        'btnExportar
+        '
+        Me.btnExportar.Location = New System.Drawing.Point(602, 30)
+        Me.btnExportar.Name = "btnExportar"
+        Me.btnExportar.Size = New System.Drawing.Size(75, 23)
+        Me.btnExportar.TabIndex = 4
+        Me.btnExportar.Text = "Export Excel"
+        Me.btnExportar.UseVisualStyleBackColor = True
         '
         'btnRelatorio
         '
@@ -169,8 +180,8 @@ Partial Class FrmCadLocacao
         '
         'tbPesquisa_IdLocacao
         '
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.tbPesquisa_IdLocacao.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle11.NullValue = Nothing
+        Me.tbPesquisa_IdLocacao.DefaultCellStyle = DataGridViewCellStyle11
         Me.tbPesquisa_IdLocacao.HeaderText = "id-Locação"
         Me.tbPesquisa_IdLocacao.MaxInputLength = 20
         Me.tbPesquisa_IdLocacao.Name = "tbPesquisa_IdLocacao"
@@ -178,9 +189,9 @@ Partial Class FrmCadLocacao
         '
         'tbPesquisa_Cliente
         '
-        DataGridViewCellStyle2.Format = "N2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.tbPesquisa_Cliente.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle12.Format = "N2"
+        DataGridViewCellStyle12.NullValue = Nothing
+        Me.tbPesquisa_Cliente.DefaultCellStyle = DataGridViewCellStyle12
         Me.tbPesquisa_Cliente.HeaderText = "NomeCliente"
         Me.tbPesquisa_Cliente.MaxInputLength = 100
         Me.tbPesquisa_Cliente.Name = "tbPesquisa_Cliente"
@@ -188,9 +199,9 @@ Partial Class FrmCadLocacao
         '
         'tbPesquisa_DataLocacao
         '
-        DataGridViewCellStyle3.Format = "d"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.tbPesquisa_DataLocacao.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle13.Format = "d"
+        DataGridViewCellStyle13.NullValue = Nothing
+        Me.tbPesquisa_DataLocacao.DefaultCellStyle = DataGridViewCellStyle13
         Me.tbPesquisa_DataLocacao.HeaderText = "D. Locação"
         Me.tbPesquisa_DataLocacao.MaxInputLength = 20
         Me.tbPesquisa_DataLocacao.Name = "tbPesquisa_DataLocacao"
@@ -198,9 +209,9 @@ Partial Class FrmCadLocacao
         '
         'tbPesquisa_DataPrevisaoDevolucao
         '
-        DataGridViewCellStyle4.Format = "d"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.tbPesquisa_DataPrevisaoDevolucao.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle14.Format = "d"
+        DataGridViewCellStyle14.NullValue = Nothing
+        Me.tbPesquisa_DataPrevisaoDevolucao.DefaultCellStyle = DataGridViewCellStyle14
         Me.tbPesquisa_DataPrevisaoDevolucao.HeaderText = "D. Prev. Dev"
         Me.tbPesquisa_DataPrevisaoDevolucao.MaxInputLength = 20
         Me.tbPesquisa_DataPrevisaoDevolucao.Name = "tbPesquisa_DataPrevisaoDevolucao"
@@ -215,9 +226,9 @@ Partial Class FrmCadLocacao
         '
         'tbPesquisa_ValorDia
         '
-        DataGridViewCellStyle5.Format = "C2"
-        DataGridViewCellStyle5.NullValue = Nothing
-        Me.tbPesquisa_ValorDia.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle15.Format = "C2"
+        DataGridViewCellStyle15.NullValue = Nothing
+        Me.tbPesquisa_ValorDia.DefaultCellStyle = DataGridViewCellStyle15
         Me.tbPesquisa_ValorDia.HeaderText = "Valor Dia"
         Me.tbPesquisa_ValorDia.MaxInputLength = 20
         Me.tbPesquisa_ValorDia.Name = "tbPesquisa_ValorDia"
@@ -225,9 +236,9 @@ Partial Class FrmCadLocacao
         '
         'tbPesquisa_DataDevolucao
         '
-        DataGridViewCellStyle6.Format = "d"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.tbPesquisa_DataDevolucao.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle16.Format = "d"
+        DataGridViewCellStyle16.NullValue = Nothing
+        Me.tbPesquisa_DataDevolucao.DefaultCellStyle = DataGridViewCellStyle16
         Me.tbPesquisa_DataDevolucao.HeaderText = "D. Devolução"
         Me.tbPesquisa_DataDevolucao.MaxInputLength = 20
         Me.tbPesquisa_DataDevolucao.Name = "tbPesquisa_DataDevolucao"
@@ -308,9 +319,9 @@ Partial Class FrmCadLocacao
         '
         'DataLocacao
         '
-        DataGridViewCellStyle7.Format = "d"
-        DataGridViewCellStyle7.NullValue = Nothing
-        Me.DataLocacao.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle17.Format = "d"
+        DataGridViewCellStyle17.NullValue = Nothing
+        Me.DataLocacao.DefaultCellStyle = DataGridViewCellStyle17
         Me.DataLocacao.HeaderText = "D. Locação"
         Me.DataLocacao.MaxInputLength = 20
         Me.DataLocacao.Name = "DataLocacao"
@@ -319,9 +330,9 @@ Partial Class FrmCadLocacao
         '
         'PrevisaoDevolucao
         '
-        DataGridViewCellStyle8.Format = "d"
-        DataGridViewCellStyle8.NullValue = Nothing
-        Me.PrevisaoDevolucao.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle18.Format = "d"
+        DataGridViewCellStyle18.NullValue = Nothing
+        Me.PrevisaoDevolucao.DefaultCellStyle = DataGridViewCellStyle18
         Me.PrevisaoDevolucao.HeaderText = "D. Prev. Devolução"
         Me.PrevisaoDevolucao.MaxInputLength = 20
         Me.PrevisaoDevolucao.Name = "PrevisaoDevolucao"
@@ -329,9 +340,9 @@ Partial Class FrmCadLocacao
         '
         'ValorLocacaoDia
         '
-        DataGridViewCellStyle9.Format = "C2"
-        DataGridViewCellStyle9.NullValue = Nothing
-        Me.ValorLocacaoDia.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle19.Format = "C2"
+        DataGridViewCellStyle19.NullValue = Nothing
+        Me.ValorLocacaoDia.DefaultCellStyle = DataGridViewCellStyle19
         Me.ValorLocacaoDia.HeaderText = "Valor-Dia"
         Me.ValorLocacaoDia.MaxInputLength = 20
         Me.ValorLocacaoDia.Name = "ValorLocacaoDia"
@@ -340,10 +351,10 @@ Partial Class FrmCadLocacao
         '
         'RemoveRow
         '
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle10.Padding = New System.Windows.Forms.Padding(2)
-        Me.RemoveRow.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle20.Padding = New System.Windows.Forms.Padding(2)
+        Me.RemoveRow.DefaultCellStyle = DataGridViewCellStyle20
         Me.RemoveRow.HeaderText = ""
         Me.RemoveRow.Name = "RemoveRow"
         Me.RemoveRow.ReadOnly = True
@@ -775,4 +786,5 @@ End Sub
     Friend WithEvents ValorLocacaoDia As DataGridViewTextBoxColumn
     Friend WithEvents RemoveRow As DataGridViewButtonColumn
     Friend WithEvents btnRelatorio As Button
+    Friend WithEvents btnExportar As Button
 End Class

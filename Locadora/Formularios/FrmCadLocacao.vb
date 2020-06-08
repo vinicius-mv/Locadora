@@ -1,6 +1,7 @@
 ﻿Imports System.Globalization
 Imports Locadora.ClassesGenerica
 Imports MySql.Data.MySqlClient
+Imports Microsoft.Office.Interop
 
 Public Class FrmCadLocacao
 
@@ -549,5 +550,47 @@ Public Class FrmCadLocacao
 
         Dim frmReport = New FrmRelLocacao()
         frmReport.ShowDialog()
+    End Sub
+
+    Private Sub btnExportar_Click(sender As Object, e As EventArgs) Handles btnExportar.Click
+        Try
+            Dim xlApp = New Excel.Application()
+            Dim xlWorkBook = xlApp.Workbooks.Add(Type.Missing)
+            Dim xlWorkSheet As Excel.Worksheet
+
+            Try
+                xlWorkSheet = xlWorkBook.Sheets("Planilha1")
+            Catch ex As Exception
+                Try
+                    xlWorkSheet = xlWorkBook.Sheets("Plan1")
+                Catch ex1 As Exception
+                End Try
+            End Try
+
+            xlApp.Visible = True
+
+            For k = 1 To dgvPesquisa.ColumnCount
+                xlWorkSheet.Cells(1, k) = dgvPesquisa.Columns(k - 1).HeaderText
+                xlWorkSheet.Range("A1:G1").Interior.Color = Color.LightGray
+                xlWorkSheet.Range("A1:G1").Font.Bold = True
+            Next
+
+            Dim i As Integer
+            Dim j As Integer
+            For i = 0 To dgvPesquisa.RowCount - 1
+                For j = 0 To dgvPesquisa.ColumnCount - 1
+                    xlWorkSheet.Cells(i + 2, j + 1) = dgvPesquisa.Item(j, i).Value
+                Next
+            Next
+            'formatando valores R$
+            xlWorkSheet.Columns(6).NumberFormat = "R$###,##0.00"
+            'auto size cells
+            xlWorkSheet.Columns.AutoFit()
+
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

@@ -28,8 +28,8 @@ Namespace ClassesGenerica
 
         Private Sub Inicializa()
 
-            Dim connectionString = "SERVER=192.168.0.70;DATABASE=bd_locadora;UID=ddsinfo;PWD=dds21231;Port=3307"
-            'Dim connectionString = "SERVER=localhost;DATABASE=bd_locadora;UID=root;PWD='dds21231';Port=3307"
+            'Dim connectionString = "SERVER=192.168.0.70;DATABASE=bd_locadora;UID=ddsinfo;PWD=dds21231;Port=3307"
+            Dim connectionString = "SERVER=localhost;DATABASE=bd_locadora;UID=root;PWD='dds21231';Port=3307"
             Try
 
                 Connection = New MySqlConnection(connectionString)
